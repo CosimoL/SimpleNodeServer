@@ -7,6 +7,7 @@ const routes = require('./routes/index.js');
 const server = http.createServer((req, res) => {
 
     const pathName = url.parse(req.url).pathname;
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
     switch(req.method) {
         case 'POST':
             let body = '';
