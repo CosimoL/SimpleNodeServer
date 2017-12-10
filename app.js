@@ -7,7 +7,6 @@ const routes = require('./routes/index.js');
 const server = http.createServer((req, res) => {
 
     const pathName = url.parse(req.url).pathname;
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
     switch(req.method) {
         case 'POST':
             let body = '';
@@ -42,6 +41,9 @@ const server = http.createServer((req, res) => {
             break;
         case 'DELETE':
             console.log("Ho beccato una delete");
+            break;
+        case 'OPTIONS':
+            console.log("Ho beccato una Options");
             break;
         default:
             console.log("Sono nel case di default");
