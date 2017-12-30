@@ -7,6 +7,8 @@ var Routes = {
                 return Actions.getAccounts;
             case '/newAccount':
                 return Actions.newAccount;
+            case '/deleteAccount':
+                return Actions.deleteAccount;
             default:
                 break;
         }
